@@ -1,12 +1,20 @@
 {
   "name": "shared",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "This is a shared library",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "unbuild",
+    "stub": "unbuild --stub"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "learn-low-code",
+  "license": "MIT"
 }
