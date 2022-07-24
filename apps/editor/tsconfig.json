@@ -11,7 +11,11 @@
     "isolatedModules": true,
     "esModuleInterop": true,
     "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "paths": {
+      "@zheqi/shared": ["../../packages/shared/src/index"],
+    }
   },
-  "include": ["apps/**/src/**/*", "packages/**/src/**/*", "apps/editor/tsconfig.json"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
