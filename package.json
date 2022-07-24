@@ -1,0 +1,22 @@
+{
+  "name": "low-code",
+  "version": "0.0.1",
+  "description": "This is a low-code project",
+  "private": true,
+  "keywords": [
+    "low-code",
+    "low-code-framework"
+  ],
+  "author": "learn-low-code",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "eslint-define-config": "^1.5.1",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vite": "^3.0.2"
+  }
+}
