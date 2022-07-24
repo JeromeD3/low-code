@@ -9,6 +9,9 @@
   ],
   "author": "learn-low-code",
   "license": "MIT",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
   "devDependencies": {
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
@@ -19,6 +22,7 @@
     "eslint-plugin-vue": "^9.2.0",
     "typescript": "^4.7.4",
     "unbuild": "^0.7.6",
-    "vite": "^3.0.2"
+    "vite": "^3.0.2",
+    "vue-tsc": "^0.39.0"
   }
 }
