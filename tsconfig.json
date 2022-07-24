@@ -1,13 +1,20 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "paths": {
+      "@zhe-qi/shared": ["./packages/shared/src/index.ts"]
+    }
   },
-  "include": [
-    "apps/**/src/**/*",
-    "packages/**/src/**/*",
-  ]
+  "include": ["apps/**/src/**/*", "packages/**/src/**/*"]
 }

@@ -7,6 +7,18 @@ module.exports = defineConfig({
   parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
-    ecmaVersion: 'latest',
+    ecmaVersion: 'latest'
   },
+  overrides: [
+    {
+      files: ['*.vue'],
+      parser: 'vue-eslint-parser',
+      parserOptions: {
+        parser: '@typescript-eslint/parser',
+        sourceType: 'module',
+        ecmaVersion: 'latest'
+      },
+      extends: ['plugin:vue/vue3-recommended']
+    }
+  ]
 })
