@@ -13,5 +13,5 @@
       "@zheqi/shared": ["./packages/*/src/"],
     }
   },
-  "include": ["apps/**/src/**/*", "packages/**/src/**/*"]
+  "include": ["apps/**/src/**/*", "packages/**/src/**/*", "vite-env.d.ts"]
 }

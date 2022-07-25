@@ -3,6 +3,9 @@ import App from './App.vue'
 import { Project, IMaterial } from '@zheqi/shared'
 import { loadScript } from './utils'
 
+import router from '@/router/index'
+import { createPinia } from 'pinia'
+
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
 
@@ -35,5 +38,6 @@ Promise.all(materialList.map((material) => loadScript(material.source))).then(()
     const { render, editorProps } = (window as any).LcImage
     app.component(material.name, render)
   })
+  app.use(router).use(createPinia())
   app.mount('#app')
 })
