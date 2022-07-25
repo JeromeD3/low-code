@@ -16,6 +16,7 @@ const materialList: IMaterial[] = [
     source: '/lc-image.0.0.1.umd.js',
     name: 'LcImage',
     title: '图片',
+    thumbnail: '',
     data: [
       {
         version: '0.0.1',
@@ -25,10 +26,11 @@ const materialList: IMaterial[] = [
   }
 ]
 
-loadScript('lc-image.umd.js').then(() => {
-  console.log((window as any).LcImage)
-  const { render, editorProps } = (window as any).LcImage
+Promise.all(materialList.map((material) => loadScript(material.source))).then(() => {
   const app = createApp(App)
-  app.component('LcImage', render)
+  materialList.forEach((material) => {
+    const { render, editorProps } = (window as any).LcImage
+    app.component(material.name, render)
+  })
   app.mount('#app')
 })
