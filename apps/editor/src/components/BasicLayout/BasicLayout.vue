@@ -3,11 +3,11 @@ import BasicHeader from '../BasicHeader.vue/BasicHeader.vue'
 </script>
 
 <template>
-  <main>
-    <div>
+  <main class="h-screen">
+    <div class="h-16">
       <BasicHeader />
     </div>
-    <div>
+    <div class="h-[calc(100%-4rem)]">
       <slot></slot>
     </div>
   </main>

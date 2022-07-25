@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import EditorLayout from '@/components/EditorLayout/EditorLayout.vue'
+</script>
 
 <template>
-  <div>edit</div>
+  <EditorLayout />
 </template>
 
 <style scoped></style>

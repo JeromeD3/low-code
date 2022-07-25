@@ -21,8 +21,7 @@ export default defineConfig(({ mode }) => ({
     }
   },
   server: {
-    port: 8080,
-    open: true,
+    port: 3000,
     proxy: {
       '/api': {
         target: loadEnv(mode, process.cwd()).VITE_APP_URL,
