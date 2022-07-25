@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "stub": "unbuild --stub"
+    "stub": "unbuild --stub",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "learn-low-code",
