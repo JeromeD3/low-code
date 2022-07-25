@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+// 编辑器布局组件
+</script>
 
 <template>
   <div class="h-full flex">
