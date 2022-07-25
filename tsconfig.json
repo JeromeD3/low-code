@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "paths": {
+      "@zheqi/shared": ["./packages/*/src/"],
+    }
+  },
+  "include": ["apps/**/src/**/*", "packages/**/src/**/*", "vite-env.d.ts"]
+}

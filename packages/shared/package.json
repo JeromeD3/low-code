@@ -1,0 +1,32 @@
+{
+  "name": "@zheqi/shared",
+  "version": "0.0.1",
+  "description": "This is a shared library",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/learn-low-code/low-code"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "stub": "unbuild --stub",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "learn-low-code",
+  "license": "MIT"
+}
