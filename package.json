@@ -10,20 +10,37 @@
   "author": "learn-low-code",
   "license": "MIT",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install",
+    "commit": "git add . && cz-customizable",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,vue}\"",
+    "changelog": "conventional-changelog -p gitmoji-config -i CHANGELOG.md -s"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
     "@types/node": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.30.7",
     "@typescript-eslint/parser": "^5.30.7",
     "@vitejs/plugin-vue": "^3.0.0",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-git-commit-emoji": "^1.0.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "conventional-changelog-gitmoji-config": "^1.4.3",
+    "cz-customizable": "^6.9.1",
     "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-define-config": "^1.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.2.0",
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0",
     "typescript": "^4.7.4",
     "unbuild": "^0.7.6",
     "vite": "^3.0.2",
     "vitest": "^0.19.0",
+    "vue-global-api": "^0.4.1",
     "vue-tsc": "^0.39.0"
   }
 }

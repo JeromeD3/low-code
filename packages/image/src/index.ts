@@ -4,8 +4,8 @@ export default {
   render: App,
   editorProps: {
     src: {
-      type: 'string'
+      type: 'string',
+      defaultValue: '//cdn.lowcode.cn/def.png'
     }
   }
 }
-
