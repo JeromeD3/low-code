@@ -10,6 +10,7 @@
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
+    "@unocss/reset": "^0.44.7",
     "@zheqi/shared": "workspace:*",
     "vue": "^3.2.37"
   }

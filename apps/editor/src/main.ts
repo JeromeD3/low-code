@@ -3,7 +3,10 @@ import App from './App.vue'
 import { Project, IMaterial } from '@zheqi/shared'
 import { loadScript } from './utils'
 
-console.log(Project.create())
+import 'uno.css'
+import '@unocss/reset/tailwind.css'
+
+// console.log(Project.create())
 
 const materialList: IMaterial[] = [
   {

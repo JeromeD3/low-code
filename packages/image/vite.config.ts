@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: './src/index.ts',
       name: 'LcImage',
-      fileName: `lc-image${pkg.version}`,
+      fileName: `lc-image.${pkg.version}`,
       formats: ['umd']
     }
   },
