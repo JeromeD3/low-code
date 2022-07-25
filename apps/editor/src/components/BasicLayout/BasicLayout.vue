@@ -8,7 +8,7 @@ import BasicHeader from '../BasicHeader.vue/BasicHeader.vue'
       <BasicHeader />
     </div>
     <div>
-      <router-view />
+      <slot></slot>
     </div>
   </main>
 </template>

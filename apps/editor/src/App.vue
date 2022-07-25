@@ -3,8 +3,9 @@ import BasicLayout from './components/BasicLayout/BasicLayout.vue'
 </script>
 
 <template>
-  <BasicLayout></BasicLayout>
-  <LcImage />
+  <BasicLayout>
+    <RouterView />
+  </BasicLayout>
 </template>
 
 <style lang="scss">
