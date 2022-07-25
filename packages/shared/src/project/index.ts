@@ -1,9 +1,10 @@
 import { uuid } from '../utils'
 
-export interface IProject {
-  name: string // 项目名称
-  description: string // 项目描述
-  pages: IPage[] // 页面
+export interface IElement {
+  id: number // 元素id
+  name: string // 元素名称
+  mId: number // 物料id
+  mVersion: string // 物料版本
 }
 
 export interface IPage {
@@ -12,51 +13,35 @@ export interface IPage {
   elements: IElement[] // 元素
 }
 
-export interface IElement {
-  id: number // 元素id
-  name: string // 元素名称
-  mId: number // 物料id
-  mVersion: string // 物料版本
+export interface IProject {
+  name: string // 项目名称
+  description: string // 项目描述
+  pages: IPage[] // 页面
 }
 
-export class Project implements IProject {
-  public static create(p?: IProject) {
-    const project = new Project()
-    if (p) {
-      project.name = p.name
-      project.description = p.description
-      p.pages.forEach(page => project.addPage(Page.create(page)))
-    } else {
-      project.addPage(Page.create())
+export class PageElement implements IElement {
+  public static create(e?: IElement) {
+    const element = new PageElement()
+    if (e) {
+      element.id = e.id
+      element.name = e.name
+      element.mId = e.mId
+      element.mVersion = e.mVersion
     }
-    
-    return project
+    return element
   }
-  public name: string = 'New Porject'
-  public description: string = 'New Porject Description'
-  public pages: Page[] = []
+  public id = Number(uuid())
+  public name = 'New Element'
+  public mId = 0
+  public mVersion = ''
   constructor() {}
 
-  public addPage(page: Page) {
-    this.pages.push(page)
-  }
-
-  public removePage(page: Page) {
-    const index = this.pages.indexOf(page)
-    if (index > -1) {
-      this.pages.splice(index, 1)
-    }
-  }
-
-  public insertPage(page: Page, index: number) {
-    this.pages.splice(index, 0, page)
-  }
-
-  public getJson(): IProject {
+  public getJson() {
     return {
+      id: this.id,
       name: this.name,
-      description: this.description,
-      pages: this.pages.map(page => page.getJson())
+      mId: this.mId,
+      mVersion: this.mVersion
     }
   }
 }
@@ -64,15 +49,15 @@ export class Project implements IProject {
 export class Page implements IPage {
   public static create(p?: IPage) {
     const page = new Page()
-    if(p) {
+    if (p) {
       page.name = p.name
       page.description = p.description
-      p.elements.forEach(element => page.addElement(PageElement.create(element)))
+      p.elements.forEach((element) => page.addElement(PageElement.create(element)))
     }
     return page
   }
-  public name: string = 'New Page'
-  public description: string = 'New Page Description'
+  public name = 'New Page'
+  public description = 'New Page Description'
   public elements: PageElement[] = []
   constructor() {}
 
@@ -95,34 +80,49 @@ export class Page implements IPage {
     return {
       name: this.name,
       description: this.description,
-      elements: this.elements.map(element => element.getJson())
+      elements: this.elements.map((element) => element.getJson())
     }
   }
 }
 
-export class PageElement implements IElement {
-  public static create(e?: IElement) {
-    const element = new PageElement()
-    if (e) {
-      element.id = e.id
-      element.name = e.name
-      element.mId = e.mId
-      element.mVersion = e.mVersion
+export class Project implements IProject {
+  public static create(p?: IProject) {
+    const project = new Project()
+    if (p) {
+      project.name = p.name
+      project.description = p.description
+      p.pages.forEach((page) => project.addPage(Page.create(page)))
+    } else {
+      project.addPage(Page.create())
     }
-    return element
+
+    return project
   }
-  public id: number = Number(uuid())
-  public name: string = 'New Element'
-  public mId: number = 0
-  public mVersion: string = ''
+  public name = 'New Porject'
+  public description = 'New Porject Description'
+  public pages: Page[] = []
   constructor() {}
 
-  public getJson() {
+  public addPage(page: Page) {
+    this.pages.push(page)
+  }
+
+  public removePage(page: Page) {
+    const index = this.pages.indexOf(page)
+    if (index > -1) {
+      this.pages.splice(index, 1)
+    }
+  }
+
+  public insertPage(page: Page, index: number) {
+    this.pages.splice(index, 0, page)
+  }
+
+  public getJson(): IProject {
     return {
-      id: this.id,
       name: this.name,
-      mId: this.mId,
-      mVersion: this.mVersion
+      description: this.description,
+      pages: this.pages.map((page) => page.getJson())
     }
   }
 }
