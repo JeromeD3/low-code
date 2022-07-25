@@ -1,0 +1,16 @@
+{
+  "name": "@zheqi/image",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "learn-low-code",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^3.2.37"
+  }
+}

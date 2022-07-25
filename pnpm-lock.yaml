@@ -38,6 +38,12 @@ importers:
       '@zheqi/shared': link:../../packages/shared
       vue: 3.2.37
 
+  packages/image:
+    specifiers:
+      vue: ^3.2.37
+    dependencies:
+      vue: 3.2.37
+
 packages:
 
   /@ampproject/remapping/2.2.0:
