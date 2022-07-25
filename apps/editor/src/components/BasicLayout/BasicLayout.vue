@@ -3,14 +3,14 @@ import BasicHeader from '../BasicHeader.vue/BasicHeader.vue'
 </script>
 
 <template>
-  <div>
+  <main>
     <div>
       <BasicHeader />
     </div>
     <div>
       <slot></slot>
     </div>
-  </div>
+  </main>
 </template>
 
 <style scoped></style>

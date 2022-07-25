@@ -1,8 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import BasicLayout from './components/BasicLayout/BasicLayout.vue'
+</script>
 
 <template>
-  <div id="app">hello</div>
+  <BasicLayout></BasicLayout>
   <LcImage />
 </template>
 
-<style scoped></style>
+<style lang="scss">
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+}
+</style>
