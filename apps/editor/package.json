@@ -5,10 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview --port 4173",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit",
     "eslint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src"
   },
   "dependencies": {
