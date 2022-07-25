@@ -5,7 +5,12 @@ import vue from '@vitejs/plugin-vue'
 import Unocss from 'unocss/vite'
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins: [vue(), Unocss()],
+  plugins: [
+    vue({
+      reactivityTransform: true
+    }),
+    Unocss()
+  ],
   define: {
     // 关闭选项api，降低打包体积
     __VUE_OPTIONS_API__: false

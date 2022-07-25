@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.44.7",
+    "@vueuse/core": "^8.9.4",
     "@zheqi/shared": "workspace:*",
+    "daisyui": "^2.20.0",
     "pinia": "^2.0.16",
     "vue": "^3.2.37",
     "vue-router": "^4.1.2"

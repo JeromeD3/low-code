@@ -8,7 +8,7 @@ import { createPinia } from 'pinia'
 
 import 'uno.css'
 import '@unocss/reset/tailwind.css'
-
+import 'daisyui/dist/full.css'
 // console.log(Project.create())
 
 const materialList: IMaterial[] = [
