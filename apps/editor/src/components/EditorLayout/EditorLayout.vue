@@ -1,12 +1,20 @@
 <script setup lang="ts">
-// 编辑器布局组件
+import EditorLeft from '../EditorLeft/EditorLeft.vue'
+import EditorRight from '../EditorRight/EditorRight.vue'
 </script>
 
 <template>
   <div class="h-full flex">
-    <div h-full bg-gray-200 class="w-20%"></div>
+    <!-- 物料 -->
+    <div h-full class="w-20%">
+      <EditorLeft />
+    </div>
+    <!-- 画布 -->
     <div h-full class="w-60%"></div>
-    <div h-full bg-gray-200 class="w-20%"></div>
+    <!-- 内容样式编辑器 -->
+    <div h-full class="w-20%">
+      <EditorRight />
+    </div>
   </div>
 </template>
 

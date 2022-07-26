@@ -8,11 +8,4 @@ import BasicLayout from './components/BasicLayout/BasicLayout.vue'
   </BasicLayout>
 </template>
 
-<style lang="scss">
-html,
-body,
-#app {
-  height: 100%;
-  width: 100%;
-}
-</style>
+<style lang="scss"></style>
